@@ -1,27 +1,54 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
 }
-.container{
-margin-left: 165px ;
-margin-right: 165px ;
+
+.container {
+    margin-left: 165px;
+    margin-right: 165px;
+
 
 }
 
-.header{
-display: flex;
-gap: 232.5px;
+.header {
+    display: flex;
+    gap: 232.5px;
+    padding: 21.84px 0px;
+
 }
 
-.menu ul{
+.menu ul {
     display: flex;
     list-style-type: none;
     gap: 60px;
 }
-.icons ul{
+
+.icons ul {
     display: flex;
     list-style-type: none;
-   gap: 24px;
+    gap: 24px;
+}
+
+/*collection CSS*/
+.collection {
+    display: flex;
+    gap: 30px;
+    text-align: center;
+    padding: 80px 0px;
+    flex-wrap: wrap;
+
+}
+
+img {
+    width: 100%;
+}
+
+.card {
+    width: calc((100% - 90px)/4);
+}
+
+.card h2 {
+    margin-top: 23px;
 }
