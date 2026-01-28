@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.container{
+margin-left: 165px ;
+margin-right: 165px ;
+
+}
+
+.header{
+display: flex;
+gap: 232.5px;
+}
+
+.menu ul{
+    display: flex;
+    list-style-type: none;
+    gap: 60px;
+}
+.icons ul{
+    display: flex;
+    list-style-type: none;
+   gap: 24px;
+}
