@@ -5,24 +5,49 @@
 
 }
 
+:root {
+    --primaryColor: #3A3845;
+    --primaryFont: Inter;
+}
+
 .container {
-    margin-left: 165px;
-    margin-right: 165px;
+    width: calc(100% - 330px);
+    margin: 0 auto;
 
 
 }
 
-.header {
+.row {
     display: flex;
-    gap: 232.5px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header {
+
     padding: 21.84px 0px;
 
+}
+
+.menuIcon {
+    display: none;
+    width: 20px;
+}
+
+.altIcon {
+    display: none;
+}
+
+.menuIcon img {
+    size: 100%;
 }
 
 .menu ul {
     display: flex;
     list-style-type: none;
     gap: 60px;
+
 }
 
 .icons ul {
@@ -31,13 +56,21 @@
     gap: 24px;
 }
 
+a {
+    font-family: var(--primaryFont), sans-serif;
+    font-size: 14px;
+    color: var(--primaryColor);
+    line-height: 22px;
+    text-decoration: none;
+}
+
+
 /*collection CSS*/
 .collection {
-    display: flex;
-    gap: 30px;
-    text-align: center;
-    padding: 80px 0px;
-    flex-wrap: wrap;
+
+    /*  gap: 30px;*/
+    padding: 40px 0px;
+
 
 }
 
@@ -47,8 +80,151 @@ img {
 
 .card {
     width: calc((100% - 90px)/4);
+    text-align: center;
 }
 
 .card h2 {
     margin-top: 23px;
+}
+
+h2 {
+    font-family: var(--primaryFont), sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    color: var(--primaryColor);
+    line-height: 24px;
+}
+
+/* collection css end*/
+/* media query start*/
+
+@media screen and (min-width:360px) and (max-width:1200px) {
+
+    /*header*/
+    .container {
+        width: 90%
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    .altIcon,
+    .menuIcon {
+        display: flex;
+    }
+
+    /*header end*/
+    /*collection*/
+    h2 {
+        font-size: 9px;
+        letter-spacing: 0.03em;
+    }
+
+    .card h2 {
+        margin-top: 0px;
+    }
+
+    .card {
+        width: calc((100% - 45px)/4);
+    }
+
+    .collection {
+        padding: 10px 0px;
+    }
+}
+
+/*min 220*/
+@media screen and (min-width:220px) and (max-width:360px) {
+
+    .collection .row {
+        flex-direction: column;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    .altIcon,
+    .menuIcon {
+        display: flex;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 30px;
+
+    }
+
+    .collection {
+
+        padding: 10px 0px;
+
+    }
+
+    .card h2 {
+
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:220px) {
+    .container {
+        width: 100%;
+    }
+
+    .row {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    .altIcon,
+    .menuIcon {
+        display: flex;
+    }
+
+    .card {
+        width: 100%;
+
+
+    }
+
+    .collection,
+    .header {
+        padding: 0;
+        margin: 0;
+    }
+
+    .card h2 {
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 100%;
+    }
 }
