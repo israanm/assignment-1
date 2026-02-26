@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 :root {
@@ -10,11 +9,14 @@
     --primaryFont: Inter;
 }
 
+body {
+    font-family: var(--primaryFont);
+    color: var(--primaryColor);
+}
+
 .container {
     width: calc(100% - 330px);
     margin: 0 auto;
-
-
 }
 
 .row {
@@ -24,19 +26,48 @@
     flex-wrap: wrap;
 }
 
-.header {
-
-    padding: 21.84px 0px;
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "EB Garamond", serif;
 }
+
+/**********************************************************SER-Header*******************************************************************/
+.header {
+    padding: 21.84px 0px;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    top: 0px;
+    z-index: 1;
+}
+
+.header a {
+    font-family: var(--primaryFont), sans-serif;
+    font-size: 14px;
+    color: var(--primaryColor);
+    line-height: 22px;
+    text-decoration: none;
+}
+
 
 .menuIcon {
     display: none;
     width: 20px;
+    flex-shrink: 0;
 }
 
 .altIcon {
+    /*.menu*/
     display: none;
+    flex-shrink: 0;
+}
+
+.menuIcon {
+    flex-shrink: 0;
 }
 
 .menuIcon img {
@@ -47,7 +78,6 @@
     display: flex;
     list-style-type: none;
     gap: 60px;
-
 }
 
 .icons ul {
@@ -56,30 +86,88 @@
     gap: 24px;
 }
 
-a {
-    font-family: var(--primaryFont), sans-serif;
-    font-size: 14px;
-    color: var(--primaryColor);
-    line-height: 22px;
+.header img {
+    width: 100%;
+}
+
+/***************************************************************SER-hero****************************************************************/
+.hero {
+    position: relative;
+}
+
+.hero .image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero .description {
+    text-align: center;
+}
+
+.hero .content {
+    width: 100%;
+}
+
+.hero .content .row {
+    flex-direction: column;
+    gap: 42px;
+    justify-content: center;
+    background-color: #826F66;
+    position: absolute;
+    left: 165px;
+    top: 0px;
+    height: 100%;
+    width: 30%;
+}
+
+.content .description h1 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 3px;
+    color: #FFFDFB;
+    padding: 0 87.5px;
+    margin-top: 20px;
+}
+
+.content .description p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: #FFFDFB;
+}
+
+.hero .shop_now_btn {
+    padding: 15px 71px;
+    background-color: #fff;
     text-decoration: none;
+    text-transform: uppercase;
+    color: #826F66;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
 }
 
-
-/*collection CSS*/
+/*End_hero*/
+/***********************************************************SER-collection************************************************************/
 .collection {
-
-    /*  gap: 30px;*/
-    padding: 40px 0px;
-
-
+    padding: 80px 0px 40px;
 }
 
-img {
+.collection .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.collection img {
     width: 100%;
 }
 
 .card {
-    width: calc((100% - 90px)/4);
+    /*collection*/
     text-align: center;
 }
 
@@ -87,7 +175,8 @@ img {
     margin-top: 23px;
 }
 
-h2 {
+.collection h2 {
+    text-transform: uppercase;
     font-family: var(--primaryFont), sans-serif;
     font-size: 18px;
     letter-spacing: 0.06em;
@@ -96,135 +185,241 @@ h2 {
     line-height: 24px;
 }
 
-/* collection css end*/
-/* media query start*/
+/* collection end*/
+/********************************************************************SER-sellers****************************************************************/
+.best_sellers {
+    text-align: center;
+    padding: 40px 0;
+}
 
-@media screen and (min-width:360px) and (max-width:1200px) {
+.best_sellers .row {
+    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    align-items: stretch;
+}
 
-    /*header*/
+.best_sellers .item {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.best_sellers img {
+    width: 100%;
+}
+
+.best_sellers h2 {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    line-height: 36px;
+    margin-bottom: 48px;
+}
+
+.best_sellers .item_content {
+    margin-top: 24px;
+}
+
+.best_sellers h3 {
+    font-family: var(--primaryFont);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+    line-height: 20px;
+}
+
+.best_sellers .price {
+    letter-spacing: 0;
+    font-family: var(--primaryFont);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 20px;
+}
+
+.best_sellers .description {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #807F86;
+    width: 95%;
+    margin-top: 17px;
+    margin-bottom: 58px;
+}
+
+.best_sellers .add_to_cart {
+    padding: 15px 81.5px;
+    background-color: #fff;
+    text-transform: uppercase;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 600;
+    /*line-height: 18px;*/
+    letter-spacing: .07em;
+    border: 1px solid #111;
+    margin-top: auto;
+}
+
+/*End sellers*/
+
+
+
+
+
+/********************************************************** SER-media query start**************************************************************/
+@media screen and (min-width:1199px) and (max-width:1450px) {
+    /**************************************hero****************************************/
+
+    .content .description h1 {
+        font-size: 30px;
+        padding: 0 50px;
+    }
+    /************************************sellers***************************************/
+    .best_sellers .add_to_cart {
+        padding: 15px 78px;
+    }
+}
+
+@media screen and (min-width:799px) and (max-width:1200px) {
     .container {
-        width: 90%
+        width: 85%;
     }
-
-    .menu {
-        display: none;
+    /************************************hero******************************************/
+    .hero .content .row {
+        width: 33%;
+        left: 100px;
+        gap: 35px;
     }
-
-    .icons {
-        display: none;
+    .content .description h1 {
+        font-size: 25px;
+        padding: 0 50px;
     }
-
-    .altIcon,
-    .menuIcon {
-        display: flex;
-    }
-
-    /*header end*/
-    /*collection*/
-    h2 {
-        font-size: 9px;
+    /************************************collection***************************************/
+    .collection h2 {
+        font-size: 16px;
         letter-spacing: 0.03em;
     }
 
     .card h2 {
-        margin-top: 0px;
+        margin-top: 18px;
     }
+/************************************sellers***************************************/
+.best_sellers .add_to_cart {
+    padding: 15px 78px;
+}
+}
 
-    .card {
-        width: calc((100% - 45px)/4);
-    }
-
-    .collection {
-        padding: 10px 0px;
+@media screen and (min-width:799px) and (max-width:960px) {
+    /*************************************hero******************************************/
+    .hero .content .row {
+        width: 38%;
+        left: 98px;
+        gap: 35px;
     }
 }
 
-/*min 220*/
-@media screen and (min-width:220px) and (max-width:360px) {
-
-    .collection .row {
-        flex-direction: column;
-    }
+@media screen and (min-width:0px) and (max-width:800px) {
 
     .container {
-        width: 100%;
-    }
-
-    .menu {
-        display: none;
-    }
-
-    .icons {
-        display: none;
-    }
-
-    .altIcon,
-    .menuIcon {
-        display: flex;
-    }
-
-    .card {
-        width: 100%;
-        margin-bottom: 30px;
-
-    }
-
-    .collection {
-
-        padding: 10px 0px;
-
-    }
-
-    .card h2 {
-
-        margin: 0;
-    }
-}
-
-@media screen and (max-width:220px) {
-    .container {
-        width: 100%;
-    }
-
-    .row {
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .container {
-        width: 100%;
-    }
-
-    .menu {
-        display: none;
-    }
-
-    .icons {
-        display: none;
-    }
-
-    .altIcon,
-    .menuIcon {
-        display: flex;
-    }
-
-    .card {
-        width: 100%;
-
-
+        width: 90%
     }
 
     .collection,
-    .header {
-        padding: 0;
-        margin: 0;
+    .header,
+    .hero,
+    .best_sellers {
+        padding: 20px 0;
+    }
+    /************************************header***************************************/
+    .menu {
+        display: none;
     }
 
-    .card h2 {
-        margin: 0;
+    .icons {
+        display: none;
     }
 
-    h2 {
-        font-size: 100%;
+    .altIcon,
+    .menuIcon {
+        display: flex;
+    }
+    /************************************hero***************************************/
+    .hero {
+        position: static;
+    }
+
+    .hero .content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .hero .description h1 {
+        font-size: 25px;
+        padding: 0 6%;
+    }
+
+    .hero .content .image {
+        width: 100%;
+        height: 350px;
+    }
+
+    .hero .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: right;
+    }
+
+    .hero .content .row {
+        position: static;
+        width: 100%;
+        padding: 40px;
+    }
+/************************************collection***************************************/
+.collection h2 {
+    font-size: 14px;
+    letter-spacing: 0.03em;
+}
+
+.card h2 {
+    margin-top: 15px;
+}
+/************************************sellers***************************************/
+.best_sellers .add_to_cart {
+    padding: 15px 49px;
+}
+
+.best_sellers .row {
+    gap: 15px;
+}
+
+.best_sellers .description {
+    margin-top: 11px;
+    margin-bottom: 31px;
+}
+
+}
+
+@media screen and (min-width:0) and (max-width:300px) {
+    .container {
+        width: 100%;
+    }
+
+    .collection,
+    .header,
+    .hero .best_sellers {
+        padding: 5px 0;
+        margin: 0;
+    }
+    /************************************hero***************************************/
+    .hero .shop_now_btn {
+        padding: 20px 40px;
+        font-size: 13px;
+        text-align: center;
+
     }
 }
+
