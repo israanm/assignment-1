@@ -38,11 +38,12 @@ h6 {
 /**********************************************************SER-Header*******************************************************************/
 .header {
     padding: 21.84px 0px;
-    position: fixed;
+    position: sticky;
     width: 100%;
     background-color: #fff;
     top: 0px;
     z-index: 1;
+
 }
 
 .header a {
@@ -186,30 +187,93 @@ h6 {
 }
 
 /* collection end*/
-/********************************************************************SER-sellers****************************************************************/
-.best_sellers {
+/***************************************************************************SER-bannerCSS***************************************************/
+
+.banner {
+    padding: 40px 0;
+}
+
+.banner .row {
+    background-color: #F7F6F5;
+    ;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.banner img {
+    width: 100%;
+    display: block;
+}
+
+.banner .content .info {
+    width: 67%;
+    margin: auto;
+
+}
+
+.banner .content {
+    text-align: center;
+    margin: auto;
+}
+
+.banner .content h2 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.banner .content p {
+    color: #595667;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    margin-top: 24px;
+    margin-bottom: 32px;
+}
+
+.banner .content .shop-now-link {
+    text-transform: uppercase;
+    color: #3A3845;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 1px;
+    padding: 15px 18px;
+}
+
+/*banner End*/
+/********************************************************************SER-sellers+.new-arrivals*****************************************************/
+.best_sellers,
+.new-arrivals {
     text-align: center;
     padding: 40px 0;
 }
 
-.best_sellers .row {
+.best_sellers .row,
+.new-arrivals .row {
     gap: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     align-items: stretch;
 }
 
-.best_sellers .item {
+.best_sellers .item,
+.new-arrivals .item {
     text-align: left;
     display: flex;
     flex-direction: column;
 }
 
-.best_sellers img {
+.best_sellers img,
+.new-arrivals img {
     width: 100%;
 }
 
-.best_sellers h2 {
+.best_sellers h2,
+.new-arrivals h2 {
     font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
@@ -218,11 +282,13 @@ h6 {
     margin-bottom: 48px;
 }
 
-.best_sellers .item_content {
+.best_sellers .item_content,
+.new-arrivals .item_content {
     margin-top: 24px;
 }
 
-.best_sellers h3 {
+.best_sellers h3,
+.new-arrivals h3 {
     font-family: var(--primaryFont);
     font-size: 14px;
     font-weight: 600;
@@ -231,7 +297,8 @@ h6 {
     line-height: 20px;
 }
 
-.best_sellers .price {
+.best_sellers .price,
+.new-arrivals .price {
     letter-spacing: 0;
     font-family: var(--primaryFont);
     font-size: 14px;
@@ -240,7 +307,8 @@ h6 {
     line-height: 20px;
 }
 
-.best_sellers .description {
+.best_sellers .description,
+.new-arrivals .description {
     font-size: 14px;
     font-weight: 400;
     line-height: 22px;
@@ -250,7 +318,8 @@ h6 {
     margin-bottom: 58px;
 }
 
-.best_sellers .add_to_cart {
+.best_sellers .add_to_cart,
+.new-arrivals .add_to_cart {
     padding: 15px 81.5px;
     background-color: #fff;
     text-transform: uppercase;
@@ -264,9 +333,154 @@ h6 {
 }
 
 /*End sellers*/
+/*******************************our blog********************************************/
+.our_blog {
+    padding: 40px 0;
+    text-align: center;
+}
 
+.our_blog .row {
+    background-color: #F7F6F5;
+    ;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
 
+.our_blog img {
+    width: 100%;
+    display: block;
+}
 
+.our_blog .content .info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.our_blog h2 {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    line-height: 36px;
+    margin-bottom: 48px;
+}
+
+.our_blog .content .category {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    color: #807F86;
+}
+
+.our_blog .content .info {
+    width: 67%;
+    margin: auto;
+
+}
+
+.our_blog .content {
+    text-align: center;
+    margin: auto;
+}
+
+.our_blog .content h3 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.our_blog .content p {
+    color: #595667;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    margin-bottom: 32px;
+
+}
+
+.our_blog .content .read-more {
+    text-transform: uppercase;
+    color: #595667;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 1px;
+    padding: 15px 18px;
+}
+
+/****************************************email-signup****************************************************/
+.email-signup {
+    padding: 40px 0;
+    margin: auto;
+}
+
+.email-signup .row {
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+}
+
+.email-signup .signup {
+    font-size: 16px;
+    font-weight: 600;
+    color: #595667;
+    line-height: 22px;
+    letter-spacing: 0;
+
+}
+
+.email-signup h2 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.email-signup .signup-form {
+    text-align: center;
+    margin: auto;
+    width: 380px;
+}
+
+.signup-form button {
+    font-family: "inter";
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #3A3845;
+    border: 1px solid #3A3845;
+    background-color: #fff;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    margin: 32px auto 0;
+    cursor: pointer;
+}
+
+.signup-form input {
+    display: block;
+    border: none;
+    border-bottom: 1px solid #3A3845;
+
+    font-size: 16px;
+    color: #595667;
+    font-weight: 400;
+    font-family: "inter";
+    line-height: 24px;
+    letter-spacing: 0;
+    padding: 14px 0;
+    text-align: center;
+    outline: none;
+    width: 100%;
+    cursor: pointer;
+
+}
 
 
 /********************************************************** SER-media query start**************************************************************/
@@ -277,27 +491,37 @@ h6 {
         font-size: 30px;
         padding: 0 50px;
     }
-    /************************************sellers***************************************/
-    .best_sellers .add_to_cart {
+
+    /************************************sellers+.new-arrivals***************************************/
+    .best_sellers .add_to_cart,
+    .new-arrivals .add_to_cart {
         padding: 15px 78px;
     }
+
+    .banner .content .info {
+        width: 85%;
+    }
+
 }
 
 @media screen and (min-width:799px) and (max-width:1200px) {
     .container {
         width: 85%;
     }
-    /************************************hero******************************************/
+
+    /******************************************hero*************************************************/
     .hero .content .row {
         width: 33%;
         left: 100px;
         gap: 35px;
     }
+
     .content .description h1 {
         font-size: 25px;
         padding: 0 50px;
     }
-    /************************************collection***************************************/
+
+    /******************************************collection*******************************************/
     .collection h2 {
         font-size: 16px;
         letter-spacing: 0.03em;
@@ -306,14 +530,20 @@ h6 {
     .card h2 {
         margin-top: 18px;
     }
-/************************************sellers***************************************/
-.best_sellers .add_to_cart {
-    padding: 15px 78px;
-}
+
+    /************************************sellers+.new-arrivals***************************************/
+    .best_sellers .add_to_cart,
+    .new-arrivals .add_to_cart {
+        padding: 15px 78px;
+    }
+
+
+
 }
 
 @media screen and (min-width:799px) and (max-width:960px) {
-    /*************************************hero******************************************/
+
+    /*****************************************hero***********************************************/
     .hero .content .row {
         width: 38%;
         left: 98px;
@@ -330,10 +560,13 @@ h6 {
     .collection,
     .header,
     .hero,
-    .best_sellers {
+    .best_sellers,
+    .new-arrivals,
+    .email-signup {
         padding: 20px 0;
     }
-    /************************************header***************************************/
+
+    /*****************************************header***************************************/
     .menu {
         display: none;
     }
@@ -346,7 +579,8 @@ h6 {
     .menuIcon {
         display: flex;
     }
-    /************************************hero***************************************/
+
+    /********************************************hero*****************************************/
     .hero {
         position: static;
     }
@@ -378,42 +612,60 @@ h6 {
         width: 100%;
         padding: 40px;
     }
-/************************************collection***************************************/
-.collection h2 {
-    font-size: 14px;
-    letter-spacing: 0.03em;
+
+    /************************************collection************************************************/
+    .collection h2 {
+        font-size: 14px;
+        letter-spacing: 0.03em;
+    }
+
+    .card h2 {
+        margin-top: 15px;
+    }
+
+    /************************************sellers+new-arrivals***************************************/
+    .best_sellers .add_to_cart,
+    .new-arrivals .add_to_cart {
+        padding: 15px 49px;
+    }
+
+    .best_sellers .row,
+    .new-arrivals .row {
+        gap: 15px;
+    }
+
+    .best_sellers .description,
+    .new-arrivals .description {
+        margin-top: 11px;
+        margin-bottom: 31px;
+    }
+
 }
 
-.card h2 {
-    margin-top: 15px;
-}
-/************************************sellers***************************************/
-.best_sellers .add_to_cart {
-    padding: 15px 49px;
-}
-
-.best_sellers .row {
-    gap: 15px;
-}
-
-.best_sellers .description {
-    margin-top: 11px;
-    margin-bottom: 31px;
-}
-
-}
-
-@media screen and (min-width:0) and (max-width:300px) {
+@media screen and (max-width:450px) {
     .container {
         width: 100%;
     }
 
+    .best_sellers h2,
+    .new-arrivals h2 {
+        font-size: 24px;
+        margin-bottom: 10px
+    }
+}
+
+@media screen and (min-width:0) and (max-width:300px) {
+
     .collection,
     .header,
-    .hero .best_sellers {
+    .hero,
+    .best_sellers,
+    .new-arrivals,
+    .email-signup {
         padding: 5px 0;
         margin: 0;
     }
+
     /************************************hero***************************************/
     .hero .shop_now_btn {
         padding: 20px 40px;
@@ -421,5 +673,177 @@ h6 {
         text-align: center;
 
     }
+
+    /********************************sellers+new-arrivals*****************************/
+    .best_sellers h2,
+    .new-arrivals h2 {
+        font-size: 20px;
+    }
 }
 
+
+/************************************media for banner+our blog**********************************/
+@media screen and (min-width:941px) and (max-width:1300px) {
+
+    .banner .content {
+        /**/
+        height: 100%;
+    }
+
+    .banner .row .image {
+        /**/
+        height: 100%;
+
+    }
+
+    .banner .content .info {
+        width: 90%;
+        margin: 25px auto;
+    }
+
+    .banner .content .info p {
+        font-size: 15px;
+    }
+
+    .banner .content .info h2 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width:941px) and (max-width:1280px) {
+    .banner .content .info {
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    .our_blog .content .info {
+        width: 90%;
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (min-width:1060px) and (max-width:1200px) {
+    .banner .content .info {
+        width: 80%;
+        margin: 30px auto;
+    }
+
+    .our_blog .content .info {
+        width: 80%;
+    }
+
+}
+
+@media screen and (min-width:0) and (max-width:940px) {
+
+    .banner .content .info,
+    .our_blog .content .info {
+        width: 58%;
+    }
+
+    /*.banner .content .shop-now-link, .our_blog .content .read-more{
+    margin: 0px auto;
+}*/
+    .banner .content,
+    .our_blog .content {
+        padding: 50px;
+    }
+}
+
+@media screen and (min-width:657px) and (max-width:800px) {
+    .banner .content .info {
+        width: 81%;
+    }
+
+    .our_blog .content .info {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width:0px) and (max-width:656px) {
+    .banner .content .info {
+        width: 95%;
+    }
+
+    .banner .content .info p {
+        font-size: 15px;
+    }
+
+    .banner .content .info h2 {
+        font-size: 27px;
+    }
+
+    .our_blog .content .info {
+        width: 90%;
+    }
+
+    .banner .row,
+    .our_blog .row {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (min-width:0) and (max-width:440px) {
+    .container {
+        width: 100%;
+    }
+
+    .banner .content .info,
+    .our_blog .content .info {
+        width: 100%;
+    }
+
+    .banner .content .info p,
+    .our_blog .content .info p {
+        font-size: 14px;
+    }
+
+    .banner .content .info h2,
+    .our_blog .content .info h3 {
+        font-size: 25px;
+    }
+
+    .our_blog .content .category {
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (max-width:940px) {
+    .our_blog .row .content {
+        grid-area: first;
+    }
+
+    .our_blog .row .image {
+        grid-area: second;
+    }
+
+    .our_blog .row {
+        grid-template-areas: "second" "first";
+    }
+}
+
+/******************************************************media email-signup*************************************************************/
+@media screen and (min-width:505px) and (max-width:565px) {
+    .email-signup .row h2 {
+        width: 74%;
+    }
+}
+
+@media screen and (min-width:453px) and (max-width:504px) {
+    .email-signup .row h2 {
+        width: 74%;
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width:0) and (max-width:452px) {
+    .email-signup .row h2 {
+        width: 81%;
+        font-size: 25px;
+    }
+
+    .email-signup .signup-form {
+        width: 80%;
+    }
+}
