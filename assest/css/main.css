@@ -197,7 +197,7 @@ h6 {
     background-color: #F7F6F5;
     ;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));/*heer*/
 }
 
 .banner img {
@@ -234,7 +234,7 @@ h6 {
     margin-bottom: 32px;
 }
 
-.banner .content .shop-now-link {
+.banner .content .shop-now-link, .btn-link {
     text-transform: uppercase;
     color: #3A3845;
     font-size: 14px;
@@ -817,7 +817,7 @@ h6 {
     .our_blog .row .image {
         grid-area: second;
     }
-
+/*heer**/
     .our_blog .row {
         grid-template-areas: "second" "first";
     }
@@ -845,5 +845,44 @@ h6 {
 
     .email-signup .signup-form {
         width: 80%;
+    }
+}
+/******************************************************media second-banner*************************************************************/
+@media screen and (max-width:1022px) {
+
+     .second-banner .content p{
+      margin-top: 15px;
+      margin-bottom: 15px;
+
+     }
+
+}
+@media screen and (max-width:940px) {
+
+     .second-banner .content{
+        padding: 0;
+     }
+     .second-banner .info{
+        padding: 50px;
+     }
+    .second-banner .row .rev-info {
+        grid-area: first;
+    }
+
+    .second-banner .row .rev-image {
+        grid-area: second;
+    }
+    .second-banner .row {
+        grid-template-areas: "first" "second";
+    }
+    .second-banner .content .info{
+        width: 85%;
+    }
+}
+@media screen and (min-width:0) and (max-width:940px)
+
+{
+     .second-banner .content .info{
+        width: 100%;
     }
 }
