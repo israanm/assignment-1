@@ -1091,3 +1091,10 @@ a:hover {
     }
 
 }
+@media (max-width: 450px) {
+ 
+    .footer-right, .footer-left{
+        margin-left:10px ;
+    }
+
+}
