@@ -35,6 +35,8 @@ h6 {
     font-family: "EB Garamond", serif;
 }
 
+
+
 /**********************************************************SER-Header*******************************************************************/
 .header {
     padding: 21.84px 0px;
@@ -52,8 +54,12 @@ h6 {
     color: var(--primaryColor);
     line-height: 22px;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
+a:hover {
+    color: rgba(58, 56, 69, 0.5);
+}
 
 .menuIcon {
     display: none;
@@ -151,6 +157,14 @@ h6 {
     font-weight: 600;
 }
 
+.hero .shop_now_btn:hover {
+    color: #fff;
+    background-color: #826F66;
+    border: 1px solid #fff;
+    transition: all 0.3s ease;
+
+}
+
 /*End_hero*/
 /***********************************************************SER-collection************************************************************/
 .collection {
@@ -197,12 +211,15 @@ h6 {
     background-color: #F7F6F5;
     ;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));/*heer*/
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    /*heer*/
 }
 
 .banner img {
     width: 100%;
     display: block;
+    height: auto;
+    object-fit: cover;
 }
 
 .banner .content .info {
@@ -234,7 +251,8 @@ h6 {
     margin-bottom: 32px;
 }
 
-.banner .content .shop-now-link, .btn-link {
+.banner .content .shop-now-link,
+.btn-link {
     text-transform: uppercase;
     color: #3A3845;
     font-size: 14px;
@@ -242,6 +260,16 @@ h6 {
     line-height: 20px;
     letter-spacing: 1px;
     padding: 15px 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+.banner .content .shop-now-link:hover,
+.btn-link:hover,
+.our_blog .content .read-more:hover {
+    color: rgba(58, 56, 69, 0.5);
+
 }
 
 /*banner End*/
@@ -330,6 +358,29 @@ h6 {
     letter-spacing: .07em;
     border: 1px solid #111;
     margin-top: auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+.best_sellers .add_to_cart:hover,
+.new-arrivals .add_to_cart:hover {
+    padding: 15px 70.5px;
+
+    background-color: var(--primaryColor);
+    border-color: #3A3845;
+    box-shadow: 0 10px 40px rgba(58, 56, 69, 0.2);
+    border-radius: 2px;
+    color: white;
+}
+
+.best_sellers .item:has(.add_to_cart:hover),
+.new-arrivals .item:has(.add_to_cart:hover) {
+    padding: 15px;
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(58, 56, 69, 0.15);
+    transition: all 0.3s ease;
+    transform: scale(1.08);
 }
 
 /*End sellers*/
@@ -412,11 +463,13 @@ h6 {
     line-height: 20px;
     letter-spacing: 1px;
     padding: 15px 18px;
+    transition: all 0.3s ease;
+
 }
 
 /****************************************email-signup****************************************************/
 .email-signup {
-    padding: 40px 0;
+    padding: 80px 0;
     margin: auto;
 }
 
@@ -461,6 +514,13 @@ h6 {
     padding: 10px 24px;
     margin: 32px auto 0;
     cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+.signup-form button:hover {
+    background: #3A3845;
+    color: #fff;
 }
 
 .signup-form input {
@@ -817,7 +877,8 @@ h6 {
     .our_blog .row .image {
         grid-area: second;
     }
-/*heer**/
+
+    /*heer**/
     .our_blog .row {
         grid-template-areas: "second" "first";
     }
@@ -847,24 +908,28 @@ h6 {
         width: 80%;
     }
 }
+
 /******************************************************media second-banner*************************************************************/
 @media screen and (max-width:1022px) {
 
-     .second-banner .content p{
-      margin-top: 15px;
-      margin-bottom: 15px;
+    .second-banner .content p {
+        margin-top: 15px;
+        margin-bottom: 15px;
 
-     }
+    }
 
 }
+
 @media screen and (max-width:940px) {
 
-     .second-banner .content{
+    .second-banner .content {
         padding: 0;
-     }
-     .second-banner .info{
+    }
+
+    .second-banner .info {
         padding: 50px;
-     }
+    }
+
     .second-banner .row .rev-info {
         grid-area: first;
     }
@@ -872,17 +937,157 @@ h6 {
     .second-banner .row .rev-image {
         grid-area: second;
     }
+
     .second-banner .row {
         grid-template-areas: "first" "second";
     }
-    .second-banner .content .info{
+
+    .second-banner .content .info {
         width: 85%;
     }
 }
-@media screen and (min-width:0) and (max-width:940px)
 
-{
-     .second-banner .content .info{
+@media screen and (min-width:0) and (max-width:940px) {
+    .second-banner .content .info {
         width: 100%;
     }
+}
+
+/******************************************************footer*****************************************************************/
+.footer {
+    background-color: var(--primaryColor);
+    color: #ccc;
+    margin-top: 20px;
+
+}
+
+.footer-right {
+    padding-top: 60px;
+    padding-bottom: 70px;
+}
+
+.footer-left .logo {
+    margin-top: 48px;
+    cursor: pointer;
+}
+
+.content-footer {
+    width: 70%;
+    margin: auto;
+}
+
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 1.5fr 1px 2fr;
+    gap: 80.27px;
+
+
+
+}
+
+.footer-left h3 {
+    color: #E5E5E5;
+    margin-bottom: 15px;
+}
+
+.footer-left p {
+    font-family: var(--primaryFont);
+    color: #E5E5E5;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 24px 0 32px;
+}
+
+.footer-left .btn {
+    border: 1px solid #E5E5E5;
+    ;
+    padding: 10px 20px;
+    color: #E5E5E5;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+.footer-left .btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+.divider {
+    background: rgba(255, 255, 255, 0.2);
+    width: 1px;
+    height: 100%;
+}
+
+.footer-right {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.col h4 {
+    color: #E5E5E5;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-family: var(--primaryFont);
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+
+.col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.col li {
+    margin-bottom: 15px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.col li:hover {
+    color: #fff;
+}
+
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    padding: 32px 0;
+    font-size: 13px;
+}
+
+.footer-bottom span {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.footer-bottom span:hover {
+    color: #fff;
+}
+
+
+@media (max-width: 992px) {
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .footer-right {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    }
+
+    .content-footer {
+        margin: 0;
+        width: 65%;
+    }
+
 }
